@@ -20,6 +20,16 @@ function git-dirty {
   fi
 }
 
+function gitify {
+    status=$(git status 2>/dev/null | tail -n 1)
+    if [[ $status == "" ]]
+    then
+        echo ""
+    else
+        echo $(git-branch-name)$(git-dirty)
+    fi
+}
+
 function make-prompt {
   local RED="\[\033[0;31m\]"
   local GREEN="\[\033[0;32m\]"
