@@ -1,6 +1,3 @@
-export GOPATH=$HOME/Developer/go
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 # Make a git-aware prompt
 function git-branch-name {
 local branch
@@ -49,9 +46,3 @@ make-prompt
 if [ -f ~/.bash_aliases ]; then
 . ~/.bash_aliases
 fi
-
-# Torch local install
-# TODO: Move this out to a different file
-export PATH=$HOME/torch/install/bin:$PATH  # Added automatically by torch-dist
-export LD_LIBRARY_PATH=$HOME/torch/install/lib:$LD_LIBRARY_PATH  # Added automatically by torch-dist
-export DYLD_LIBRARY_PATH=/Users/jonathan/torch/install/lib:$DYLD_LIBRARY_PATH  # Added automatically by torch-dist
